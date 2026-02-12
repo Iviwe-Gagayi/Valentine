@@ -2,21 +2,22 @@
 import { motion } from "framer-motion";
 
 export default function ValentinesPage() {
-
-
-
-
     return (
         <main className="relative h-screen w-full overflow-hidden bg-black">
+            <picture className="absolute inset-0 h-full w-full">
+                {/*he browser checks this source FIRST */}
+                <source
+                    srcSet="/bench-render-mobile.png"
+                    media="(max-width: 767px)"
+                />
 
-            <motion.img
-                initial={{ scale: 1.1, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-                src="/bench render.png"
-                className="absolute inset-0 w-full h-full object-cover"
-            />
 
+                <img
+                    src="/bench render.png"
+                    alt="Valentine Bench"
+                    className="h-full w-full object-cover"
+                />
+            </picture>
         </main>
     );
 }
