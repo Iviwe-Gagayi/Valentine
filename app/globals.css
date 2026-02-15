@@ -31,3 +31,33 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  10%,
+  30% {
+    transform: scale(1.5);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  40%,
+  60% {
+    transform: scale(1.5);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 8s ease-in-out infinite;
+}
